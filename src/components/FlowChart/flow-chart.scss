@@ -1,0 +1,73 @@
+.flow-container { /* Corrected class name to match your component */
+  flex: 4;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  color: #ffffff;
+  width: 100%; /* Or a fixed width like 40em */
+  height: 52vh; /* Or a fixed height like 500px, adjust as needed */
+  background-color: #ffffff; /* This will be the background of the container */
+  padding: 10px;
+  cursor: pointer;
+}
+
+.flow-container:hover{ /* Corrected class name */
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.76);
+}
+
+/* Apply styles to default nodes */
+.react-flow__node {
+  padding: 10px 14px;
+  background-color: #ffffff;
+  border: 2px solid rgb(80, 80, 80);
+  border-radius: 8px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.react-flow__node:hover {
+  border-color: #ce4444;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Optional: Customize MiniMap node colors */
+.react-flow__minimap-node {
+  fill: #3498db;
+  stroke: #fff;
+}
+
+.custom-button-overlay {
+  position: absolute;
+  bottom: 3px;
+  right: 1px;
+  z-index: 10;
+}
+
+.title-flowchart{
+  font-size: 30px; /* Add unit for font-size */
+  top: 10px;
+  color: black;
+}
+
+.gradient-text {
+  font-weight: 700;
+  background: rgb(77, 77, 77);
+  background-clip: text;
+  -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+  position: absolute;
+  top: 10px;
+  font-size: 10px;
+  z-index: 99;
+  color: #333;
+}
+
+.flow-additional{
+  color: white;
+  background-color: #fe0f0f;
+  padding: 5px;
+}

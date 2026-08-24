@@ -1,0 +1,268 @@
+.automation-analytics-page {
+  padding: 16px 22px 28px;
+}
+
+.automation-analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.automation-analytics-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+}
+
+.automation-analytics-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.automation-analytics-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.automation-analytics-controls select,
+.refresh-btn {
+  height: 38px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.refresh-btn {
+  background: #e60000;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.last-updated {
+  margin: 0 0 12px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.automation-kpis {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.automation-kpi {
+  border-radius: 14px;
+  padding: 12px;
+  color: #ffffff;
+  min-height: 94px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.automation-kpi span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.automation-kpi strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 30px;
+}
+
+.automation-kpi.total {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+}
+
+.automation-kpi.completed {
+  background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.automation-kpi.failed {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+}
+
+.automation-kpi.running {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.automation-kpi.success {
+  background: linear-gradient(135deg, #06b6d4, #22d3ee);
+}
+
+.automation-analytics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.analytics-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+  padding: 14px;
+}
+
+.analytics-card__head {
+  margin-bottom: 10px;
+}
+
+.analytics-card__head h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+}
+
+.distribution-list {
+  display: grid;
+  gap: 10px;
+}
+
+.distribution-row__meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.distribution-row__track {
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.distribution-row__fill {
+  height: 100%;
+}
+
+.distribution-row__fill.completed {
+  background: #10b981;
+}
+
+.distribution-row__fill.failed {
+  background: #ef4444;
+}
+
+.distribution-row__fill.running {
+  background: #3b82f6;
+}
+
+.performance-list {
+  display: grid;
+  gap: 10px;
+}
+
+.performance-list div {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.performance-list span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.performance-list strong {
+  display: block;
+  margin-top: 4px;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.trend-card {
+  margin-bottom: 12px;
+}
+
+.trend-chart {
+  width: 100%;
+  height: 140px;
+}
+
+.trend-grid {
+  stroke: #e2e8f0;
+  stroke-width: 0.8;
+}
+
+.trend-line {
+  fill: none;
+  stroke: #e60000;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trend-point {
+  fill: #e60000;
+  stroke: #ffffff;
+  stroke-width: 0.8;
+}
+
+.trend-labels {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.automation-table-block h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 18px;
+}
+
+.analytics-empty {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+@media (max-width: 1100px) {
+  .automation-kpis {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+  }
+
+  .automation-analytics-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .automation-analytics-page {
+    padding: 14px;
+  }
+
+  .automation-analytics-header {
+    flex-direction: column;
+  }
+
+  .automation-kpis {
+    grid-template-columns: 1fr;
+  }
+}
+

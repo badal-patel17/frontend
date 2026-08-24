@@ -1,0 +1,125 @@
+@use '../../../style/variables';
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+.navbar-flow {
+  height: var(--navbar-h);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  border-radius: 14px;
+
+  &__inner {
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 1px;
+  }
+
+  &__env {
+    font-size: 11px;
+    color: #8e8e8e;
+  }
+
+  &__search {
+    position: relative;
+    flex: 1;
+    max-width: 420px;
+    margin-left: auto;
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px !important;
+    pointer-events: none;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #ffffff;
+    font-size: 13px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #e60000;
+      box-shadow: 0 0 0 3px rgba(230, 0, 0, 0.12);
+    }
+    &::placeholder { color: #bbb; }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  &__icon-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.2s;
+
+    &:hover { background: rgba(0,0,0,0.06); }
+  }
+}
+
+// Dark mode
+.app.dark .navbar-flow {
+  background-color: #1a1a2e;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+
+  .navbar-flow__title { color: #e0e0e0; }
+  .navbar-flow__search-input {
+    background: #2d2d3d;
+    border-color: #3d3d4d;
+    color: #ccc;
+    &::placeholder { color: #666; }
+  }
+  .navbar-flow__icon-btn { color: #aaa; &:hover { background: rgba(255,255,255,0.08); } }
+}

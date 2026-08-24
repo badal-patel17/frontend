@@ -1,0 +1,54 @@
+{
+  "name": "vfort-dashboard",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^6.4.0",
+    "@mui/material": "^6.5.0",
+    "@mui/system": "^7.3.11",
+    "@mui/x-data-grid": "^7.28.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@xyflow/react": "^12.8.2",
+    "chart.js": "^4.5.0",
+    "gh-pages": "^6.3.0",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "recharts": "^2.15.0",
+    "sass": "^1.77.0",
+    "web-vitals": "^3.5.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.3"
+  }
+}

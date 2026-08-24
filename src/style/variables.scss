@@ -1,0 +1,15 @@
+// src/style/variables.scss
+// Single source of truth for layout dimensions.
+// Import this file in any SCSS that needs these values.
+
+:root {
+  --sidebar-w: 220px;
+  --navbar-h: 64px;
+}
+
+// Tablet — collapse sidebar to icon-only (0px hides it completely)
+@media (max-width: 900px) {
+  :root {
+    --sidebar-w: 0px;
+  }
+}

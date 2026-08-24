@@ -1,0 +1,129 @@
+.flow-container-desg{ /* Corrected class name to match your component */
+    flex: 4;
+    margin: 0 !important;
+    border: none !important;
+    color: black;
+    width: 100%; /* Or a fixed width like 40em */
+    height: 50vh; /* Or a fixed height like 500px, adjust as needed */
+    background-color: #f7f9fa;
+    width: 100%; /* This will be the background of the container */
+    // padding: 10px;
+    box-shadow: none !important;
+  }
+  
+  .flow-container-desg:hover{ /* Corrected class name */
+    box-shadow: none !important;
+  }
+  
+  /* Apply styles to default nodes */
+  .react-flow__node {
+    padding: 10px 14px;
+    background-color: rgba(122, 127, 157, 0.674);
+    border: 5px solid black !important;
+    border-radius: 8px;
+    border: none !important;
+    font-weight: 500;
+    color: #242424;
+    // box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .react-flow__node:hover {
+    border-color: #ce4444;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  /* Optional: Customize MiniMap node colors */
+  .react-flow__minimap-node {
+    fill: #3498db;
+    stroke: #fff;
+  }
+  
+  .custom-button-overlay {
+    position: absolute;
+    bottom: 3px;
+    right: 1px;
+    z-index: 10;
+  }
+  
+  .title-flowchart{
+    font-size: 30px; /* Add unit for font-size */
+    top: 10px;
+    color: black;
+  }
+  
+  .flow-title-head {
+    font-weight: 700;
+    background: rgb(77, 77, 77);
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 5px;
+    z-index: 99;
+    color: white;
+  }
+  
+  .flow-additional{
+    color: white;
+    background-color: #fe0f0f;
+    padding: 5px;
+  }
+
+  @keyframes greenPulse {
+    0% {
+      box-shadow: 0 0 0px 0px #00F500;
+    }
+    50% {
+      box-shadow: 0 0 10px 4px #00F500;
+    }
+    100% {
+      box-shadow: 0 0 0px 0px #00F500;
+    }
+  }
+  
+  .node-green-animated {
+    border: 2px solid #00F500;
+    color: #171c3b;
+    border-radius: 8px;
+    background-color: #9cfc9c;
+    animation: greenPulse 1.5s ease-in-out;
+    font-size: 10px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  .node-green-static {
+    border: 2px solid #00F500;
+    color: #171c3b;
+    border-radius: 8px;
+    background-color: #9cfc9c;
+    font-size: 10px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  .node-red-static {
+    border: 2px solid #f51900;
+    color: white;
+    border-radius: 8px;
+    background-color: #ec1a1a;
+    font-size: 10px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .run-flow-button{
+    position: absolute;
+    right: 20px !important;
+    bottom: 10px;
+    z-index: 99;
+    border-radius: 50%;
+    border: none;
+    color: #fe0f0f;
+  }
+  
+  

@@ -1,0 +1,20 @@
+.chart {
+  flex: 4;
+  box-shadow: 0 2px 10px rgba(201,201,201,0.47);
+  padding: 10px;
+  color: gray;
+  border-radius: 8px;
+
+  // Fixed: was nested .chart:hover (invalid) — use & for self-reference
+  &:hover {
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.76);
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .chartGrid {
+    stroke: rgb(228, 225, 225);
+  }
+}

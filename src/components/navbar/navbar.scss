@@ -1,0 +1,111 @@
+@use '../../style/variables';
+
+.navbar {
+  height: var(--navbar-h);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  border-radius: 14px;
+
+  &__inner {
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__title-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 1px;
+  }
+
+  &__version {
+    font-size: 11px;
+    color: #8e8e8e;
+  }
+
+  &__search {
+    flex: 1;
+    max-width: 520px;
+    position: relative;
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 18px !important;
+  }
+
+  &__search input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+    padding: 0 12px 0 34px;
+    font-size: 13px;
+    outline: none;
+  }
+
+  &__search input:focus {
+    border-color: #e60000;
+    box-shadow: 0 0 0 3px rgba(230, 0, 0, 0.12);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.2s;
+
+    &:hover { background: rgba(0,0,0,0.06); }
+  }
+}
+
+// Dark mode
+.app.dark .navbar {
+  background-color: #1a1a2e;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+
+  .navbar__title   { color: #e0e0e0; font-size: 20px; }
+  .navbar__version { color: #666; }
+  .navbar__search input {
+    background: #2d2d3d;
+    border-color: #3d3d4d;
+    color: #e2e8f0;
+  }
+  .navbar__icon-btn { color: #aaa; &:hover { background: rgba(255,255,255,0.08); } }
+}

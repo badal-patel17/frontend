@@ -1,0 +1,71 @@
+@use '../../style/variables';
+
+.flow-home {
+  display: flex;
+  background: #f4f6fb;
+  margin-left: var(--sidebar-w);
+  transition: margin-left 0.35s ease;
+  min-height: 100vh;
+
+  .flow-homeContainer {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 22px 28px;
+
+    .orders-page-heading {
+      margin: 14px 0;
+
+      h2 {
+        margin: 0;
+        color: #111827;
+      }
+
+      p {
+        margin: 4px 0 0;
+        color: #64748b;
+        font-size: 13px;
+      }
+    }
+
+    .widgets {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .excel-data {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .flow-home .flow-homeContainer .widgets {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .flow-home {
+    margin-left: 0;
+
+    .flow-homeContainer {
+      padding: 14px;
+
+      .widgets {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .flow-home .flow-homeContainer .widgets {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app.dark .flow-home { background: #111; }

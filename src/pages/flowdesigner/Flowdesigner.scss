@@ -1,0 +1,22 @@
+.flow-home {
+    display: flex;
+    border: none !important;
+    box-shadow: none !important;
+    margin-left: var(--sidebar-w);
+    background-color: #f7f9fa !important;
+    min-height: 100vh;
+
+    .flow-homeContainer {
+      flex: 1;
+      min-width: 0;
+      padding: 16px 22px 28px;
+    }
+  }
+
+@media (max-width: 1000px) {
+  .flow-home .flow-homeContainer {
+    padding: 14px;
+  }
+}
+
+ 

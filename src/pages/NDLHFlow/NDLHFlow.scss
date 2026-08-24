@@ -1,0 +1,18 @@
+@use '../../style/variables';
+
+.flow-home {
+  display: flex;
+  background-color: #f7f9fa;
+  margin-left: var(--sidebar-w);
+  transition: margin-left 0.35s ease;
+  min-height: 100vh;
+
+  .flow-homeContainer {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.app.dark .flow-home { background: #111; }
